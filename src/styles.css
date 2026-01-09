@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@keyframes bounce-loop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up 10px */
+  }
+  100% {
+    transform: translateY(0); /* Back down */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-image: linear-gradient(rgba(255, 225, 0, 0.3), rgb(69, 64, 41));
+}
+header {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 20rem;
+  background-color: gold;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  border-radius: 0 0 50px 50px;
+  /* border: 1px black solid; */
+}
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  gap: 3vw;
+  align-items: center;
+  width: 100%;
+  /* border: 1px black solid; */
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+.homeLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40px, 10vw, 15rem);
+  height: clamp(40px, 12vw, 15rem);
+  margin-right: 2rem;
+  border: 1rem gold solid;
+  border-radius: 50%;
+}
+.logoImg {
+  width: clamp(40px, 5vw + 2rem, 15rem);
+  height: clamp(40px, 10rem, 15rem);
+}
+.logoName {
+  font-size: clamp(0.5rem, 1.2vw + 0.5rem, 3rem);
+  color: gold;
+  transform: scaleY(2);
+  letter-spacing: 0.3rem;
+  font-family: "Dancing Script", lobster, "Pacifico", cursive, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.5s ease;
+}
+.logoName:hover {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1) scaleY(2.2);
+}
+.btnContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+button {
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 3rem);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  color: black;
+  background-color: rgb(255, 219, 18);
+  border: 2px black solid;
+  transition: all 0.5s ease;
+}
+button:hover {
+  animation: bounce-loop 1s ease-in-out infinite;
+  color: white;
+  background-color: red;
+}
+#content {
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 5rem;
+  min-height: 100vh;
+  width: 80%;
+  background-color: gold;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  border-radius: 50px 50px 0 0;
+  /* border: 1px rgb(255, 0, 0) solid; */
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  height: 44rem;
+  width: clamp(5rem, 30vw, 80rem);
+  color: gold;
+  background-color: rgb(255, 0, 0);
+  border-radius: 25px;
+  background-size: cover;
+  font-style: italic;
+  transition: all 1s ease;
+}
+.textContainer:hover {
+  scale: 1.05;
+}
+.textHeader {
+  font-size: clamp(1rem, 2vw + 1rem, 30rem);
+}
+.textPara {
+  font-size: clamp(1rem, 1vw + 0.7rem, 30rem);
+  line-height: 1.5;
+  text-align: justify;
+  width: 85%;
+}
+.textBtn {
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
+  margin-top: 0.5rem;
+}
+.backgroundContainer {
+  display: flex;
+  align-items: center;
+  width: clamp(5rem, 30vw, 80rem);
+  height: 50rem;
+}
+.backgroundImg {
+  height: 100%;
+  width: 80%;
+  border-radius: 25px;
+  transition: all 1s ease;
+}
+.backgroundImg:hover {
+  scale: 1.05;
+}
+.footer {
+  margin: auto;
+  height: 5rem;
+  width: 80%;
+  background-color: gold;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
