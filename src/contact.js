@@ -3,6 +3,7 @@ import { clearPage } from "./index.js";
 const goToContact = () => {
   clearPage();
 
+  const body = document.querySelector("body");
   const content = document.querySelector("#content");
 
   const container = document.createElement("div");
@@ -25,6 +26,11 @@ const goToContact = () => {
   contactContainer.append(contactText, contactText2);
   container.append(headText, contactContainer);
   content.append(container);
+
+  const footer = document.createElement("div");
+  footer.classList.add("footer");
+
+  body.append(footer);
 };
 
 export default goToContact;
