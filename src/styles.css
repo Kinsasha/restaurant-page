@@ -20,9 +20,12 @@ body {
   font-size: 62.5%;
   background-image: linear-gradient(rgba(255, 225, 0, 0.3), rgb(69, 64, 41));
   cursor: context-menu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 header {
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   justify-content: center;
   width: 80%;
@@ -100,14 +103,15 @@ button:hover {
   background-color: red;
 }
 #content {
-  margin: auto;
+  /* margin: auto; */
   margin-top: 2rem;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-auto-flow: column;
   gap: 5rem;
-  min-height: 100vh;
+  height: 100%;
+  /* min-height: 100vh; */
   width: 80%;
   background-color: gold;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
@@ -122,7 +126,7 @@ button:hover {
   padding-top: 2rem;
   padding-bottom: 4rem;
   height: 44rem;
-  width: clamp(5rem, 30vw, 80rem);
+  width: clamp(5rem, 30vw + 2rem, 80rem);
   color: gold;
   background-color: rgb(255, 0, 0);
   border-radius: 25px;
@@ -148,10 +152,15 @@ button:hover {
   margin-top: 0.5rem;
 }
 .backgroundContainer {
+  margin-top: 2rem;
   display: flex;
   align-items: center;
-  width: clamp(5rem, 30vw, 80rem);
+  width: clamp(5rem, 30vw + 2rem, 80rem);
   height: 50rem;
+}
+.textContainer,
+.backgroundContainer {
+  margin-top: 2rem;
 }
 .backgroundImg {
   height: 100%;
@@ -163,11 +172,12 @@ button:hover {
   scale: 1.05;
 }
 .footer {
-  margin: auto;
+  /* margin: auto; */
   height: 5rem;
   width: 80%;
   background-color: gold;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  font-size: 12px;
   /* border: 10px black solid; */
 }
 .container {
@@ -176,17 +186,22 @@ button:hover {
   align-items: center;
   width: 80vw;
   height: 100%;
-  border: 1px black solid;
+  /* border: 1px black solid; */
 }
 .contactContainer {
   display: grid;
   margin-top: 2rem;
   padding: 5rem;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url(./asset/apple-pie-5870538.jpg);
   background-size: 100% 100%;
+  border-radius: 25px;
+  transition: all 1s ease;
+}
+.contactContainer:hover {
+  scale: 1.05;
 }
 .headText {
   color: white;
@@ -195,4 +210,57 @@ button:hover {
   font-size: clamp(0.5rem, 1vw + 1rem, 5rem);
   letter-spacing: 0.2rem;
   transform: scaleY(1.5);
+}
+
+.menuContainer {
+  width: clamp(10rem, 60rem, 200rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardContainer {
+  display: grid;
+  justify-content: center;
+  /* width: 1rem; */
+  gap: calc(2vw + 0.5rem);
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(2, 1fr);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  height: clamp(5rem, 30vw, 80rem);
+  width: clamp(5rem, 30vw, 80rem);
+  color: white;
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 25px;
+  font-family: lobster, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: justify;
+  transition: all 1s ease;
+}
+.card:hover {
+  scale: 1.05;
+}
+.card p {
+  text-align: center;
+  width: 80%;
+}
+.name {
+  font-size: clamp(0.5rem, 1vw + 1rem, 5rem);
+  margin-bottom: 0;
+}
+.description {
+  font-size: clamp(0.5rem, 0.6vw + 0.5rem, 5rem);
+  color: gold;
+  letter-spacing: 0.1rem;
+  transform: scaleY(1.1);
+}
+.price {
+  font-size: clamp(0.5rem, 0.6vw + 0.5rem, 5rem);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }

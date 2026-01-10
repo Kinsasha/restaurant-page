@@ -37,7 +37,7 @@ const goToHome = () => {
   content.append(textContainer, backgroundContainer);
 
   const footer = document.createElement("div");
-  footer.classList.add("footer");
+  content.classList.add("footer");
 
   body.append(footer);
 };

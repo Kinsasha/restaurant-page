@@ -29,8 +29,7 @@ const goToContact = () => {
 
   const footer = document.createElement("div");
   footer.classList.add("footer");
-
-  body.append(footer);
+  content.append(footer);
 };
 
 export default goToContact;

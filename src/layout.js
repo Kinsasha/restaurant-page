@@ -5,7 +5,6 @@ import goToMenu from "./menu";
 
 const layout = () => {
   const body = document.querySelector("body");
-
   const homeBtn = document.createElement("button");
   const menuBtn = document.createElement("button");
   const contactBtn = document.createElement("button");
@@ -69,7 +68,6 @@ const layout = () => {
 
   const footer = document.createElement("div");
   footer.classList.add("footer");
-
   body.append(footer);
 };
 
