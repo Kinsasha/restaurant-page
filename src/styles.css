@@ -7,7 +7,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Move up 10px */
+    transform: translateY(-5px); /* Move up 10px */
   }
   100% {
     transform: translateY(0); /* Back down */
@@ -19,6 +19,7 @@ body {
   padding: 0;
   font-size: 62.5%;
   background-image: linear-gradient(rgba(255, 225, 0, 0.3), rgb(69, 64, 41));
+  cursor: context-menu;
 }
 header {
   margin: auto;
@@ -58,7 +59,8 @@ nav {
   width: clamp(40px, 5vw + 2rem, 15rem);
   height: clamp(40px, 10rem, 15rem);
 }
-.logoName {
+.logoName,
+.headText {
   font-size: clamp(0.5rem, 1.2vw + 0.5rem, 3rem);
   color: gold;
   transform: scaleY(2);
@@ -68,7 +70,8 @@ nav {
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.5s ease;
 }
-.logoName:hover {
+.logoName:hover,
+.headText:hover {
   color: black;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   transform: scale(1.1) scaleY(2.2);
@@ -89,6 +92,7 @@ button {
   background-color: rgb(255, 219, 18);
   border: 2px black solid;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 button:hover {
   animation: bounce-loop 1s ease-in-out infinite;
@@ -129,7 +133,8 @@ button:hover {
 .textContainer:hover {
   scale: 1.05;
 }
-.textHeader {
+.textHeader,
+.headText {
   font-size: clamp(1rem, 2vw + 1rem, 30rem);
 }
 .textPara {
@@ -163,4 +168,31 @@ button:hover {
   width: 80%;
   background-color: gold;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  /* border: 10px black solid; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 100%;
+  border: 1px black solid;
+}
+.contactContainer {
+  display: grid;
+  margin-top: 2rem;
+  padding: 5rem;
+  border: 1px black solid;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url(./asset/apple-pie-5870538.jpg);
+  background-size: 100% 100%;
+}
+.headText {
+  color: white;
+}
+.contactText {
+  font-size: clamp(0.5rem, 1vw + 1rem, 5rem);
+  letter-spacing: 0.2rem;
+  transform: scaleY(1.5);
 }
