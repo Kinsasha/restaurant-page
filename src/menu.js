@@ -85,8 +85,6 @@ const menu = () => {
 
     card.append(name, description, price);
     cardContainer.append(card);
-
-    // card.console.log(menu);
   });
 
   content.append(menuContainer);
