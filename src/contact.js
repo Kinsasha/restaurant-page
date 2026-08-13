@@ -21,7 +21,7 @@ const goToContact = () => {
   headText.textContent = "Contact Us";
   contactText.textContent =
     "Contact us via Email @ kennedyokechukwu203@gmail.com";
-  contactText2.textContent = "Contact us via Github @ github.com/Kinsasha";
+  contactText2.textContent = "See portfolio page @ kinsasha.github.io/homepage";
 
   contactContainer.append(contactText, contactText2);
   container.append(headText, contactContainer);
