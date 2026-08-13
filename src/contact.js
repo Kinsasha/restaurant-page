@@ -26,10 +26,6 @@ const goToContact = () => {
   contactContainer.append(contactText, contactText2);
   container.append(headText, contactContainer);
   content.append(container);
-
-  const footer = document.createElement("div");
-  footer.classList.add("footer");
-  content.append(footer);
 };
 
 export default goToContact;

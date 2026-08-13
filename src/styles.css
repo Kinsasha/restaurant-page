@@ -22,61 +22,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-header {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  height: 20rem;
-  background-color: gold;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
-  border-radius: 0 0 50px 50px;
-}
-nav {
-  display: flex;
-  justify-content: space-around;
-  gap: 3vw;
-  align-items: center;
-  width: 100%;
-  /* border: 1px black solid; */
-}
-.logoContainer {
-  display: flex;
-  align-items: center;
-}
-.homeLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(40px, 10vw, 15rem);
-  height: clamp(40px, 12vw, 15rem);
-  margin-right: 2rem;
-  border: 1rem gold solid;
-  border-radius: 50%;
-}
-.logoImg {
-  width: clamp(40px, 5vw + 2rem, 15rem);
-  height: clamp(40px, 10rem, 15rem);
-}
-.logoName,
-.headText {
-  font-size: clamp(0.5rem, 1.2vw + 0.5rem, 3rem);
-  color: gold;
-  transform: scaleY(2);
-  letter-spacing: 0.3rem;
-  font-family: "Dancing Script", lobster, "Pacifico", cursive, system-ui,
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  transition: all 0.5s ease;
-}
-.logoName:hover,
-.headText:hover {
-  color: black;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-  transform: scale(1.1) scaleY(2.2);
-}
-.btnContainer {
-  display: flex;
   gap: 2rem;
 }
 button {
@@ -84,7 +29,7 @@ button {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
-  padding: 1rem;
+  padding: clamp(0.7rem, 1rem, 1.5rem);
   border-radius: 10px;
   color: black;
   background-color: rgb(255, 219, 18);
@@ -92,123 +37,140 @@ button {
   transition: all 0.5s ease;
   cursor: pointer;
 }
-button:hover {
-  animation: bounce-loop 1s ease-in-out infinite;
-  color: white;
-  background-color: red;
+header {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 40vh;
+  background-color: gold;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  border-radius: 0 0 15px 15px;
 }
-#content {
-  /* margin: auto; */
-  margin-top: 2rem;
-  display: grid;
+nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.homeLogo {
+  display: flex;
   justify-content: center;
   align-items: center;
-  grid-auto-flow: column;
-  gap: 5rem;
-  height: 100%;
-  /* min-height: 100vh; */
+  width: clamp(6rem, 10vw, 12rem);
+  height: clamp(6rem, 12vw, 12rem);
+  border: clamp(0.5rem, 1rem, 2rem) gold solid;
+  border-radius: 50%;
+  background-color: black;
+}
+.logoImg {
+  height: 80%;
+  width: 80%;
+  color: gold;
+}
+.logoName,
+.headText {
+  font-size: clamp(0.7rem, 1.2vw + 0.5rem, 3rem);
+  color: gold;
+  transform: scaleY(2);
+  letter-spacing: 0.3rem;
+  font-family: "Lobster", lobster, "Pacifico", cursive, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.5s ease;
+  -webkit-text-stroke: 0.5px black;
+}
+.btnContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+#content {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  height: clamp(60vh, 80vh, 100%);
   width: 80%;
   background-color: gold;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   border-radius: 50px 50px 0 0;
-  /* border: 1px rgb(255, 0, 0) solid; */
+  padding-bottom: 5rem;
+}
+.backgroundContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: clamp(5rem, 30vw + 2rem, 80rem);
+  padding-top: 2rem;
+  height: 80%;
+  width: 90%;
 }
 
-.textContainer {
+.textContainer,
+.backgroundImg {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  height: 44rem;
-  width: clamp(5rem, 30vw + 2rem, 80rem);
   color: gold;
-  background-color: rgb(255, 0, 0);
   border-radius: 25px;
-  background-size: cover;
   font-style: italic;
-  transition: all 1s ease;
+  min-height: max-content;
+  height: clamp(400px, 60vh, 50rem);
+  width: calc(50% - 1rem);
+  background-size: cover;
+  padding-bottom: 2rem;
 }
-.textContainer:hover {
-  scale: 1.05;
-}
+
 .textHeader,
 .headText {
-  font-size: clamp(1rem, 2vw + 1rem, 30rem);
+  font-size: clamp(1rem, 1.5vw + 1rem, 4rem);
+  margin-top: 1rem;
 }
 .textPara {
-  font-size: clamp(1rem, 1vw + 0.7rem, 30rem);
-  line-height: 1.5;
-  text-align: justify;
+  font-size: clamp(0.7rem, 1vw + 0.5rem, 4rem);
+  line-height: 1.3;
+  max-height: 60%;
   width: 85%;
 }
 .textBtn {
   font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
   margin-top: 0.5rem;
 }
-.backgroundContainer {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  width: clamp(5rem, 30vw + 2rem, 80rem);
-  height: 50rem;
-}
-.textContainer,
-.backgroundContainer {
-  margin-top: 2rem;
-}
-.backgroundImg {
-  height: 100%;
-  width: 80%;
-  border-radius: 25px;
-  transition: all 1s ease;
-}
-.backgroundImg:hover {
-  scale: 1.05;
-}
-.footer {
-  /* margin: auto; */
-  height: 5rem;
-  width: 80%;
-  background-color: gold;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  font-size: 12px;
-  /* border: 10px black solid; */
-}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
-  height: 100%;
-  /* border: 1px black solid; */
+  width: 80%;
 }
 .contactContainer {
   display: grid;
   margin-top: 2rem;
   padding: 5rem;
-  /* border: 1px black solid; */
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url(./asset/apple-pie-5870538.jpg);
   background-size: 100% 100%;
   border-radius: 25px;
-  transition: all 1s ease;
-}
-.contactContainer:hover {
-  scale: 1.05;
+  height: 10rem;
+  width: 80%;
 }
 .headText {
   color: white;
 }
 .contactText {
-  font-size: clamp(0.5rem, 1vw + 1rem, 5rem);
-  letter-spacing: 0.2rem;
+  font-size: clamp(0.5rem, 0.5vw + 1rem, 3rem);
   transform: scaleY(1.5);
+  background-color: rgb(6, 6, 6, 0.5);
+  text-align: center;
 }
 
 .menuContainer {
-  width: clamp(10rem, 60rem, 200rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,51 +178,81 @@ button:hover {
 .cardContainer {
   display: grid;
   justify-content: center;
-  /* width: 1rem; */
   gap: calc(2vw + 0.5rem);
-  /* grid-template-rows: repeat(2, 1fr); */
   grid-template-columns: repeat(2, 1fr);
+  border: 1px solid black;
 }
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  height: clamp(5rem, 30vw, 80rem);
-  width: clamp(5rem, 30vw, 80rem);
+  height: clamp(10rem, 35vh, 35rem);
+  width: clamp(10rem, 25vw, 35rem);
   color: white;
   background-size: 100% 100%;
   background-position: center;
   border-radius: 25px;
-  font-family: lobster, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: justify;
   transition: all 1s ease;
-}
-.card:hover {
-  scale: 1.05;
 }
 .card p {
   text-align: center;
   width: 80%;
 }
 .name {
-  font-size: clamp(0.5rem, 1vw + 1rem, 5rem);
+  font-size: clamp(0.7rem, 0.5vw + 0.8rem, 4rem);
   margin-bottom: 0;
+  font-family: Lobster, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .description {
-  font-size: clamp(0.5rem, 0.6vw + 0.5rem, 5rem);
+  font-size: clamp(0.5rem, 0.5vw + 0.5rem, 3rem);
   color: gold;
-  letter-spacing: 0.1rem;
-  transform: scaleY(1.1);
+  line-height: 1.5;
+  background-color: rgb(6, 6, 6, 0.5);
 }
 .price {
   font-size: clamp(0.5rem, 0.6vw + 0.5rem, 5rem);
-  padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
 }
-@media (max-width: 600px) {
+footer {
+  height: 5rem;
+  width: inherit;
+  /* background-color: gold;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); */
+}
+@media (max-width: 700px) {
+  body,
+  #content,
+  header,
+  footer {
+    width: 100%;
+  }
+  header {
+    height: 30vh;
+  }
   nav {
     flex-direction: column;
+    gap: 0;
+    .homeLogo {
+      border-width: 0.5rem;
+    }
+  }
+  button {
+    padding: 0.5rem;
+  }
+  .textPara {
+    font-size: 0.8rem;
+  }
+  .logoName {
+    font-size: 1.5rem;
+  }
+  .card {
+    height: clamp(10rem, 35vh, 50rem);
+    width: clamp(10rem, 35vw, 50rem);
   }
 }

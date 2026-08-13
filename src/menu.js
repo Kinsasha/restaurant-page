@@ -88,10 +88,6 @@ const menu = () => {
   });
 
   content.append(menuContainer);
-
-  const footer = document.createElement("div");
-  footer.classList.add("footer");
-  content.append(footer);
 };
 
 const goToMenu = () => {
